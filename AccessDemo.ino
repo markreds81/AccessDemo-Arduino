@@ -16,7 +16,7 @@
 #define LED_PIN		18
 
 const uint32_t connectTimeoutMs = 10000;
-const char* serviceHost = "10.0.0.5";
+const char* serviceHost = "192.168.1.111";
 const uint16_t servicePort = 8080;
 
 WiFiMulti wifiMulti;
@@ -100,8 +100,8 @@ void setup() {
 	delay(10);
 	WiFi.mode(WIFI_STA);
 
-	wifiMulti.addAP("HNW150AP", "c3m1t5rl");
-	wifiMulti.addAP("TIM-30336843", "C7oke8aIuEPBQklZnEVQ2Puj");
+	wifiMulti.addAP("MY-SSID1", "mypassword");
+	wifiMulti.addAP("MY-SSID2", "anotherpassword");
 	
 	RFID.begin(CLOCK_PIN, DATA_PIN);
 	led.begin();
